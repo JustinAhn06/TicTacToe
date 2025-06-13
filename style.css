@@ -29,10 +29,16 @@
 
 .grid-item {
     border: 1px solid #1f1f1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-weight:lighter;
 }
 
 #status {
     text-align: center;
+    align-items: center;
     margin: 20px 10px;
 }
 
