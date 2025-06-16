@@ -89,6 +89,7 @@ const aiTurn = () => {
                 }
 
             }
+            
 
             if(
                 !(isNaN(scores[win[0]])) &&
@@ -103,6 +104,35 @@ const aiTurn = () => {
             
             
         }
+        // if X can get two in a row with black end, add 200
+            
+        if(
+            scores[win[0]] == "X" &&
+            typeof scores[win[1]] === "number" &&
+            typeof scores[win[2]] === "number"
+        ) {
+            scores[win[1]] += Number(200);
+            scores[win[2]] += Number(200);
+        }
+        else if (
+            
+            typeof scores[win[0]] === "number" &&
+            scores[win[1]] == "X" &&
+            typeof scores[win[2]] === "number"
+        ) {
+            scores[win[0]] += Number(200);
+            scores[win[2]] += Number(200);
+        }
+        else if (
+            
+            typeof scores[win[0]] === "number" &&
+            typeof scores[win[1]] === "number" &&
+            scores[win[2]] == "X" 
+        ) {
+            scores[win[0]] += Number(200);
+            scores[win[1]] += Number(200);
+        }
+            
         // block win 1_000 --> done(no check) 
         if(scores[win[0]] === "X") {
             if(scores[win[0]] === scores[win[1]] && typeof scores[win[2]] === "number") scores[win[2]] += Number(1000);
@@ -112,7 +142,7 @@ const aiTurn = () => {
             if(scores[win[1]] === scores[win[2]] && typeof scores[win[0]] === "number") scores[win[0]] += Number(1000);
         }        
     }
-    // is corner 1
+    // is not corner 1
     for (let i = 1; i<9; i+=2) {
         if(typeof scores[i] === "number") scores[i] += Number(1);
     } 
