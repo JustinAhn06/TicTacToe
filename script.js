@@ -42,6 +42,9 @@ const playerTurn = (cellID) => {
     gameBoard[Number(cellID[cellID.length -1])] = "X";
 }
 /*
+
+old computer algorithm 
+
 const aiTurn = () => {
     while (true) {
         const cellNum = Math.floor(Math.random() * 9);
@@ -109,7 +112,7 @@ const aiTurn = () => {
             if(scores[win[1]] === scores[win[2]] && typeof scores[win[0]] === "number") scores[win[0]] += Number(1000);
         }        
     }
-    // is corner 1
+    
     for (let i = 1; i<9; i+=2) {
         if(typeof scores[i] === "number") scores[i] += Number(1);
     } 
