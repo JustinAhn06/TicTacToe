@@ -76,7 +76,10 @@ const aiTurn = () => {
             if(scores[win[0]] === "O"){
                 if(scores[win[0]] === scores[win[1]]) scores[win[2]] += Number(10000);
                 else if(scores[win[0]] === scores[win[2]]) scores[win[1]] += Number(10000);
-                else scores[win[2]] += Number(100);
+                else {
+                    scores[win[1]] += Number(100);
+                    scores[win[2]] += Number(100);
+                }
             }
             else if(scores[win[1]] === "O"){
                 if(scores[win[1]] === scores[win[2]]) scores[win[0]] += Number(10000);
