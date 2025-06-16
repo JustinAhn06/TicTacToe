@@ -112,7 +112,6 @@ const aiTurn = () => {
             typeof scores[win[2]] === "number"
         ) {
             scores[win[1]] += Number(200);
-            scores[win[2]] += Number(200);
         }
         else if (
             
@@ -129,7 +128,6 @@ const aiTurn = () => {
             typeof scores[win[1]] === "number" &&
             scores[win[2]] == "X" 
         ) {
-            scores[win[0]] += Number(200);
             scores[win[1]] += Number(200);
         }
             
