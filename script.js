@@ -1,4 +1,4 @@
-
+document.getElementById("footer-text").textContent = `Justin Ahn &copy; ${new Date().getFullYear()}`;
 const gameGrid = document.getElementById("game-grid");
 const statusText =  document.getElementById('status');
 const restartBtn = document.getElementById("restart");
