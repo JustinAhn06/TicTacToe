@@ -60,3 +60,16 @@ main {
 .draw {
     background-color: yellow;
 }
+
+.restart-animation {
+    animation: pulse 1s ease-in-out 0s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}

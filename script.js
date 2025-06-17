@@ -33,6 +33,7 @@ restartBtn.addEventListener('click', () => {
     for(const cell of cells) {
         cell.textContent = "";
         cell.classList.remove("player-win","computer-win","draw");
+        restartBtn.classList.remove('restart-animation');
     }
 })
 
@@ -183,6 +184,7 @@ const checkGameOver = () => {
                 for (const id of win) {
                     const item = document.getElementById(`grid-item-${id}`);
                     item.classList.add("player-win");
+                    restartBtn.classList.add('restart-animation');
                 }
             }
             else {
@@ -190,6 +192,7 @@ const checkGameOver = () => {
                 for (const id of win) {
                     const item = document.getElementById(`grid-item-${id}`);
                     item.classList.add("computer-win");
+                    restartBtn.classList.add('restart-animation');
                 }
             }
             return;
@@ -201,6 +204,7 @@ const checkGameOver = () => {
         for (let i = 0 ; i < 9 ; i++) {
             const item = document.getElementById(`grid-item-${i}`);
             item.classList.add("draw");
+            restartBtn.classList.add('restart-animation');
         }
     }
 };
