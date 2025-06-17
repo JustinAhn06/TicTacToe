@@ -48,3 +48,15 @@ main {
     justify-content: space-between;
     align-content: center;
 }
+
+.computer-win {
+    background-color: red;
+}
+
+.player-win {
+    background-color: green;
+}
+
+.draw {
+    background-color: yellow;
+}
